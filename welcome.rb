@@ -2,6 +2,7 @@ class Welcome
   require './board'
   require './player'
 
+  # prints the welcome screen
   def welcome_screen
     5.times { puts '' }
     puts 'Welcome to TicTacToe!'
@@ -12,6 +13,7 @@ class Welcome
     player_create
   end
 
+  # gets player information and instantiates two player objects
   def player_create
     print 'Enter Player 1 Name: '
     player1_name = gets.chomp
@@ -27,6 +29,7 @@ class Welcome
     game_start(player1, player2)
   end
 
+  # takes the players and passes them to the board
   def game_start(player1, player2)
     @player1 = player1
     @player2 = player2
